@@ -11,4 +11,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        AppUtils.hideSystemUI(this);
+        AppUtils.setSystemUIListener(this);
+        AppUtils.enableDrawOverApp(this);
+    }
 }
